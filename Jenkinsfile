@@ -17,7 +17,7 @@ pipeline{
              
               steps{
                   echo 'compiling..'
-                  sh 'mvn compile'
+                  bat 'mvn compile'
 	      }
           }
           stage('CodeReview'){
@@ -25,14 +25,14 @@ pipeline{
               steps{
 		    
 		  echo 'codeReview'
-                  sh 'mvn pmd:pmd'
+                  bat 'mvn pmd:pmd'
               }
           }
            stage('UnitTest'){
 		  
               steps{
 	         
-                  sh 'mvn test'
+                  bat 'mvn test'
               }
                post {
                success {
@@ -45,7 +45,7 @@ pipeline{
 		  
               steps{
 		  
-                  sh 'mvn package'
+                  bat 'mvn package'
               }
           }
 	     
