@@ -1,4 +1,4 @@
-changesdonepipeline{
+pipeline{
     tools{
         jdk 'myjava'
         maven 'mymaven131'
