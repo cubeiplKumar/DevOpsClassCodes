@@ -1,4 +1,3 @@
-
 pipeline{
 	agent any
       stages{
@@ -13,7 +12,7 @@ pipeline{
              
               steps{
                   echo 'compiling..'
-                  bat 'mvn compile'
+                  sh 'mvn compile'
 	      }
           }
           stage('CodeReview'){
@@ -21,14 +20,14 @@ pipeline{
               steps{
 		    
 		  echo 'codeReview'
-                  bat 'mvn pmd:pmd'
+                  sh 'mvn pmd:pmd'
               }
           }
            stage('UnitTest'){
 		  
               steps{
 	         
-                  bat 'mvn test'
+                  sh 'mvn test'
               }
                post {
                success {
@@ -41,7 +40,7 @@ pipeline{
 		  
               steps{
 		  
-                  bat 'mvn package'
+                  sh 'mvn package'
               }
           }
 	     
