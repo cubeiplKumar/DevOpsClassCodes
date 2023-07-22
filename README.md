@@ -6,7 +6,7 @@ a fast read for learning how to get started -ddd not an example on =sasdasdasdas
 Running the example from the command hello test
 -------------------hi akshat hello how are you
 ```
-$ mvn jetty:run
+$ mvn jetty:runheee
 ```
 
 Open [http://localhost:8080/](http://localhost:8080/)
